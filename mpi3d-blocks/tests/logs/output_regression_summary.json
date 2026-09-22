@@ -1,0 +1,2654 @@
+[
+  {
+    "case": "fixed_mu",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "auto_np1",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "auto_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "auto_np4",
+    "ranks": 4,
+    "grid": [
+      2,
+      2,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "auto_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "auto_np16",
+    "ranks": 16,
+    "grid": [
+      4,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "xslab_np2",
+    "ranks": 2,
+    "grid": [
+      2,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "xslab_np4",
+    "ranks": 4,
+    "grid": [
+      4,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "xslab_np8",
+    "ranks": 8,
+    "grid": [
+      8,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "xslab_np16",
+    "ranks": 16,
+    "grid": [
+      16,
+      1,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "yz_np4",
+    "ranks": 4,
+    "grid": [
+      1,
+      2,
+      2
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "yz_np8",
+    "ranks": 8,
+    "grid": [
+      1,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "partial_np8",
+    "ranks": 8,
+    "grid": [
+      2,
+      4,
+      1
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  },
+  {
+    "case": "fixed_mu",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "999e8c5124eed95df544595ee55c7ff9236ab37ac3751e9e655dfe1482d0e03a",
+      "fields_30.vtk": "6c73ac1eb3c4e6830d7ad9be91a619f48e3d17445d9d5e7d152fe2df13d6c092",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "eta_mu",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "f064fbe3cb17551aea5f7a4b9f6a5da36d7e91a3370572906294698495bf477f",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "anchored",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "8aa8734baef789ed6b172ce482f2188ecbccce7fcda59c37d4de4dcdda3a741a",
+      "fields_30.vtk": "79ed03254fcf3e2862dc9f89522d1c4557beef8d7f888dcb44c29f2e779a3ebc",
+      "grains.csv": "f0f36b948811418d213364988d95e2c59fb05a95cf790319a1f77d4261a14623",
+      "grain_history.csv": "2a7c9455cd5155093b357181dac061ab6572dbc8e2f86ccbb72ac1919e18be34",
+      "grain_diagnostics.csv": "f52b04ef74cd9f42df05223809b18a956a8fa7f6fe99c7e8ecf8ce0421d1f683"
+    }
+  },
+  {
+    "case": "center",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "be79c21089d8c01b9d8daea970ba847e1dda4d73652f7493367c0c24c982a254",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "fixed_center",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e10ee086378789c70cbbbb6e37fb5459b42bcded0a193349e1e00dc29bc8d464",
+      "fields_30.vtk": "011c15f34771c74b158c128860c51bb3afed730cc3b4abf7a41d2cf3275a62d7",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d"
+    }
+  },
+  {
+    "case": "O_off",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "e43352dafaf1f0d0214359602b4f84fb548afb90fd2c21bab68038af74972fb9",
+      "fields_30.vtk": "d6c3fbe9af06b4e290ffd63aa16f78a9110c1daf3662c2dbaef3d3d1d58b8fd5",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "legacy_Ck",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "b9abe2bdd99e4c6a66f2c1a2765aa99349f54024333eeddaf8429e9420d5c957",
+      "fields_30.vtk": "9bbd74e20e0d1c92a0b9d5ff4f577deed73eff6bc4328d4dfbf98da4b3d117e3",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "fc37b2f8fe7c43402e098edc4b97a0860d075b8f08c666e566a59cf8f1217bf1",
+      "grain_diagnostics.csv": "f9f7b62b25268549d89a21db2c6b602c32111e2f6dd8a9314c9f4a1636f544f5"
+    }
+  },
+  {
+    "case": "eta_frozen",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "4a675899834b33cc20c8b12ab706a18bb362a6d6adf043e8d46591aea4b268b1",
+      "fields_30.vtk": "5eb9d42dc962b489a0fb5f731c460fca19b7f369b7e87b47e598959ee0270b31",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "893c12263a2af068506ebb332a0cc542015fb8e399c4c7ce1988e04b447a46ee",
+      "grain_diagnostics.csv": "b806523d50a5ace79caff3ea2cb93e9a168ff23a92d80dbd17cf9ef0283bafc6"
+    }
+  },
+  {
+    "case": "eta_concentration",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "bdb4e8ba8c17ab88f25ec24f5547d16501df794f6755326254ad602f0db9cf5b",
+      "fields_30.vtk": "e3e509fb4ad4b60e69c9dd10a0d2fa4b21ee29fbca9359cf14f7c9ee0bf27f20",
+      "grains.csv": "637792e7ac7814e81b0de11ffdccfd7638d5bc732560753920e8c750eee69a5d",
+      "grain_history.csv": "8f2c68485a6e34b90bfc70f8a98b025785cfe1425820fdc06d28b1e6ec4c29a5",
+      "grain_diagnostics.csv": "00957106e0cfd94d7aa4cfc23d1a4816bd96554698666557123ea12879dcf153"
+    }
+  },
+  {
+    "case": "single_crystal",
+    "layout": "zbrick_np16",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exact_fields_and_grain_outputs": true,
+    "diagnostics_within_tolerance": true,
+    "ownership_audit_passed": true,
+    "sha256": {
+      "fields_0.vtk": "1ed399cd9c017bc6daf757bfe2ffc2a33e499ea3401645f7fc42a5cb727bd8cc",
+      "fields_30.vtk": "bf1bd7b0dc0650d9ef8cb9b621fe150fc83209d8deff0c8112b8ab21c88f7a6f",
+      "grains.csv": "d6c1aefe3b9f337fc8fff753a347fc57d4648787e6bc1bda2b014f715b473a01"
+    }
+  }
+]

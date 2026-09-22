@@ -1,0 +1,5 @@
+Backend: thread emulation (NOT native MPI)
+130 output/ownership cases passed.
+Prior single-rank comparison: True
+Byte-exact VTK and grain outputs; mass diagnostics checked with 1e-10*(1+abs(reference)).
+These short tests do not establish production stability, MPI performance, or material calibration.

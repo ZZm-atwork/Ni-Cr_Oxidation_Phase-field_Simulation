@@ -1,0 +1,3 @@
+$ /mnt/data/NiCr3D_MPI_blocks/emulated_mpi_test 4 --py 2x --steps 0 --out /mnt/data/should_not_be_created_noninteger_axis
+THREAD EMULATION: 4 ranks in one address space; NOT a real MPI runtime test.
+ERROR [rank 1]: --py expects a nonnegative integer (0: automatic).

@@ -1,0 +1,400 @@
+--- NiCr3D_grains.cpp
++++ NiCr3D_grains.cpp
+@@ -2,10 +2,11 @@
+  * Fields: oxygen, chromium, oxide phi, and optional metal-grain eta_i.
+  * Boundary conditions: periodic Y/Z; oxygen inlet at X=0; no flux at right.
+  * Fixed Voronoi or evolving eta-derived grain-boundary transport.
+- * VTK output: phi, conc_O, conc_Cr, mu_O, mu_Cr, grain_sum, GB_mask only.
+- * Build: mpic++ -O3 -std=c++17 NiCr3D_grains.cpp -o nicr3d_mpi
++ * Output: compressed Float32 VTI by default; seven visualization fields.
++ * Optional Float64 VTI or legacy ASCII VTK; internal calculations remain double.
++ * Build: mpic++ -O3 -std=c++17 NiCr3D_grains.cpp -o nicr3d_mpi -lz
+  * Run --help for inputs; --self-test for the built-in verification suite.
+- * The numerical model, parameter definitions and source sections are in MODEL.md.
++ * Build, output controls and implementation notes are in README.md.
+  */
+ #ifdef NICR_MPI_THREAD_TEST
+ #include "tests/mpi_threads.h" // Communication-logic tests only; not a real MPI runtime.
+@@ -15,6 +16,11 @@
+ #include <mpi.h>
+ #endif
+ #include <memory>
++#include <array>
++#include <cstdint>
++#include <cstring>
++#include <locale>
++#include <zlib.h>
+ #include <climits>
+ #include <algorithm>
+ #include <cmath>
+@@ -32,7 +38,7 @@
+ 
+ namespace fs = std::filesystem;
+ constexpr double PI=3.14159265358979323846;
+-constexpr const char* VERSION="mpi-eta-3d-v1-grain-sum-lean-gb";
++constexpr const char* VERSION="mpi-eta-3d-xslab-optimized-v1";
+ // [1] Numerical controls and material/model coefficients.
+ struct Config {
+     int nx=151, ny=101, nz=101, steps=0, output_every=5000;
+@@ -59,6 +65,10 @@
+     // eta_oxide_penalty=-1: use eta_W. Neither default is a measured Ni-Cr property.
+     std::string eta_output="all"; // Compatibility option; VTK always writes grain_sum, not individual eta fields.
+     int max_eta_fields=512;
++    // Visualization settings never enter the evolution equations.
++    std::string output_format="vti", output_precision="float32";
++    int compression_level=1; // zlib: 1 fast, 9 smallest/slower, 0 stored blocks.
++    bool frozen_eta_cache=true; // off is a verification/reference option.
+ };
+ struct Physics {
+     static constexpr double Vm=1., W=1e4, ko=1e-9, kc=7.5e-9, kp=1.7e-10, L=0.2;
+@@ -205,6 +215,124 @@
+ }
+ struct Seed { double x,y,z; };
+ struct Budget {long double nucO=0,nucCr=0,ckO=0,ckCr=0,clipO=0,clipCr=0,bcO=0,bcCr=0;long long nuclei=0,clipped=0;};
++// Sorted, disjoint intervals covering a periodic neighborhood. Full coverage
++// visits an axis only once, even if the exclusion radius exceeds its period.
++struct AxisNeighborhood { int count=0; std::array<int,2> lo{},hi{}; };
++static int bounded_reach(double radius,int n){return radius>=n?n:int(std::ceil(radius));}
++static AxisNeighborhood periodic_neighborhood(int center,double radius,int n){
++    const int r=bounded_reach(radius,n);
++    AxisNeighborhood a;
++    if(2LL*r+1>=n){a.count=1;a.lo[0]=1;a.hi[0]=n;return a;}
++    const long long lo=static_cast<long long>(center)-r,hi=static_cast<long long>(center)+r;
++    if(lo<1){a.count=2;a.lo={1,int(lo+n)};a.hi={int(hi),n};}
++    else if(hi>n){a.count=2;a.lo={1,int(lo)};a.hi={int(hi-n),n};}
++    else{a.count=1;a.lo[0]=int(lo);a.hi[0]=int(hi);}
++    return a;
++}
++
++// [3a] Streaming VTK XML ImageData writer. No VTK C++ dependency; link zlib.
++// Uses VTK's raw appended zlib block layout with UInt64 headers/offsets.
++// The 64-KiB payload buffer bounds extra RAM; no full output-array copy is made.
++// These are visualization files. Float32 conversion is optional and occurs ONLY
++// here; the physical fields and all update arithmetic remain double precision.
++class CompressedVtiWriter {
++    static constexpr std::uint64_t block_bytes=65536;
++    inline static constexpr std::array<const char*,7> names={
++        "phi","conc_O","conc_Cr","mu_O","mu_Cr","grain_sum","GB_mask"};
++    const Config& c;
++    std::string final_path,temp_path;
++    std::ofstream f;
++    std::array<std::streampos,7> offset_positions{};
++    std::streampos appended_start;
++    std::size_t next=0;
++    bool committed=false;
++    static bool little_endian(){
++        const std::uint16_t v=1;return *reinterpret_cast<const unsigned char*>(&v)==1;
++    }
++    void check(){if(!f)throw std::runtime_error("VTI write failed (check storage/quota): "+temp_path);}
++    void u64(std::uint64_t value){
++        unsigned char b[8];for(int j=0;j<8;++j)b[j]=static_cast<unsigned char>(value>>(8*j));
++        f.write(reinterpret_cast<const char*>(b),8);
++    }
++    template<class T,class Fn> void write_array(Fn value){
++        static_assert(std::numeric_limits<T>::is_iec559,"VTI requires IEEE floating point.");
++        const std::uint64_t n=std::uint64_t(c.nx)*c.ny*c.nz,total=n*sizeof(T);
++        const std::uint64_t nb=(total+block_bytes-1)/block_bytes;
++        const auto header_start=f.tellp();
++        std::vector<std::uint64_t> sizes(static_cast<std::size_t>(nb),0);
++        u64(nb);u64(block_bytes);u64(total%block_bytes);
++        for(std::uint64_t b=0;b<nb;++b)u64(0);
++        std::vector<T> buffer(static_cast<std::size_t>(block_bytes/sizeof(T)));
++        std::vector<unsigned char> packed(static_cast<std::size_t>(compressBound(block_bytes)));
++        std::size_t used=0,block=0;
++        auto flush=[&]{
++            if(!used)return;
++            auto* bytes=reinterpret_cast<unsigned char*>(buffer.data());
++            if(!little_endian())for(std::size_t q=0;q<used;++q)
++                std::reverse(bytes+q*sizeof(T),bytes+(q+1)*sizeof(T));
++            uLongf dest=static_cast<uLongf>(packed.size());
++            const int rc=compress2(packed.data(),&dest,bytes,static_cast<uLong>(used*sizeof(T)),c.compression_level);
++            if(rc!=Z_OK)throw std::runtime_error("zlib compression failed: "+std::to_string(rc));
++            sizes.at(block++)=dest;
++            f.write(reinterpret_cast<const char*>(packed.data()),static_cast<std::streamsize>(dest));check();
++            used=0;
++        };
++        for(int k=1;k<=c.nz;++k)for(int j=1;j<=c.ny;++j)for(int i=1;i<=c.nx;++i){
++            const double v=value(i,j,k);
++            if(std::isfinite(v) && std::abs(v)>std::numeric_limits<T>::max())
++                throw std::runtime_error(std::string("VTI ")+names[next]+" exceeds output type range; use --output-precision float64.");
++            // Small values may round to zero in Float32; no change to solver state.
++            buffer[used++]=static_cast<T>(v);
++            if(used==buffer.size())flush();
++        }
++        flush();
++        if(block!=sizes.size())throw std::runtime_error("Internal VTI block-count mismatch.");
++        const auto end=f.tellp();
++        f.seekp(header_start+std::streamoff(24));for(auto size:sizes)u64(size);
++        f.seekp(end);check();
++    }
++public:
++    CompressedVtiWriter(const std::string& path,const Config& cfg):c(cfg),final_path(path),temp_path(path+".tmp"){
++        static_assert(sizeof(float)==4 && sizeof(double)==8,"VTI output requires Float32/Float64.");
++        try{
++            f.open(temp_path,std::ios::binary|std::ios::trunc);
++            if(!f)throw std::runtime_error("Cannot open "+temp_path);
++            f.imbue(std::locale::classic());
++            f<<std::setprecision(17)<<"<?xml version=\"1.0\"?>\n"
++             <<"<VTKFile type=\"ImageData\" version=\"1.0\" byte_order=\"LittleEndian\" header_type=\"UInt64\" compressor=\"vtkZLibDataCompressor\">\n"
++             <<" <ImageData WholeExtent=\"0 "<<c.nx-1<<" 0 "<<c.ny-1<<" 0 "<<c.nz-1
++             <<"\" Origin=\""<<.5*c.dx<<" "<<.5*c.dy<<" "<<.5*c.dz
++             <<"\" Spacing=\""<<c.dx<<" "<<c.dy<<" "<<c.dz<<"\">\n"
++             <<"  <Piece Extent=\"0 "<<c.nx-1<<" 0 "<<c.ny-1<<" 0 "<<c.nz-1<<"\">\n"
++             <<"   <PointData Scalars=\"phi\">\n";
++            for(std::size_t a=0;a<names.size();++a){
++                f<<"    <DataArray type=\""<<(c.output_precision=="float64"?"Float64":"Float32")
++                 <<"\" Name=\""<<names[a]<<"\" NumberOfComponents=\"1\" format=\"appended\" offset=\"";
++                offset_positions[a]=f.tellp();f<<"00000000000000000000\"/>\n";
++            }
++            f<<"   </PointData>\n   <CellData/>\n  </Piece>\n </ImageData>\n <AppendedData encoding=\"raw\">\n_";
++            appended_start=f.tellp();check();
++        }catch(...){f.close();std::error_code ec;fs::remove(temp_path,ec);throw;}
++    }
++    CompressedVtiWriter(const CompressedVtiWriter&)=delete;
++    CompressedVtiWriter& operator=(const CompressedVtiWriter&)=delete;
++    ~CompressedVtiWriter(){if(!committed){f.close();std::error_code ec;fs::remove(temp_path,ec);}}
++    template<class Fn> void array(Fn value){
++        if(next>=names.size())throw std::runtime_error("Too many VTI arrays.");
++        const auto start=f.tellp();
++        const auto offset=static_cast<std::uint64_t>(start-appended_start);
++        f.seekp(offset_positions[next]);f<<std::setw(20)<<std::setfill('0')<<offset<<std::setfill(' ');
++        f.seekp(start);check();
++        if(c.output_precision=="float64")write_array<double>(value);else write_array<float>(value);
++        ++next;
++    }
++    void finish(){
++        if(next!=names.size())throw std::runtime_error("Missing VTI arrays.");
++        f<<"\n </AppendedData>\n</VTKFile>\n";f.flush();check();f.close();check();
++        fs::rename(temp_path,final_path);committed=true;
++    }
++};
++
+ class Model {
+ public:
+     Config c;
+@@ -215,6 +343,10 @@
+     Field eta_s2; // Physics cache, not a VTK array; allocated only with eta fields.
+     std::vector<Field> eta,eta_new;
+     bool has_eta()const{return c.grain_evolution && c.grains;}
++    bool eta_cache_dirty=true;
++    // All ranks must invalidate together before the next collective refresh.
++    // Call this after any external/restart edit of eta; built-in mutations do so.
++    void invalidate_eta_cache(){eta_cache_dirty=true;}
+ 
+     std::vector<Seed> seeds;
+     std::vector<int> volumes;
+@@ -464,9 +596,10 @@
+     }
+     void refresh(){
+         ghosts(o);ghosts(cr);ghosts(p);
+-        if(has_eta()){
++        if(has_eta() && (c.eta_L>0. || !c.frozen_eta_cache || eta_cache_dirty)){
+             for(auto& e:eta)ghosts(e);
+             rebuild_eta_mask();
++            eta_cache_dirty=false;
+         }
+         for(int i=domain.first;i<=domain.last;++i)for(int j=1;j<=c.ny;++j)for(int k=1;k<=c.nz;++k){
+             double hh=h(p(i,j,k));
+@@ -524,6 +657,7 @@
+         MPI_Reduce(local,total,8,MPI_LONG_DOUBLE,MPI_SUM,0,domain.comm);
+         MPI_Reduce(local_count,counts,2,MPI_LONG_LONG_INT,MPI_SUM,0,domain.comm);
+         if(snapshot){
++            snapshot->invalidate_eta_cache();
+             snapshot->b={total[0],total[1],total[2],total[3],total[4],total[5],total[6],total[7],counts[0],counts[1]};
+             snapshot->initialO=initialO;snapshot->initialCr=initialCr;
+             snapshot->center_seed_cells=center_seed_cells;
+@@ -543,23 +677,41 @@
+             // Count each event/mass increment exactly once, even across slabs.
+             b.nucO+=snapshot->b.nucO;b.nucCr+=snapshot->b.nucCr;b.nuclei+=snapshot->b.nuclei;
+         }
+-        MPI_Bcast(&changed,1,MPI_INT,0,domain.comm);
+-        return changed;
++        // A sphere can cross ranks; invalidate collectively, even on ranks
++        // whose local eta values did not change. No rebuild for an empty scan.
++        int update[2]={changed,snapshot && snapshot->b.nuclei>0 ? 1 : 0};
++        MPI_Bcast(update,2,MPI_INT,0,domain.comm);
++        if(update[1] && has_eta())invalidate_eta_cache();
++        return update[0];
+     }
+     bool valid_nucleus(int x,int y,int z)const{
+         const double r=c.radius_grid;
+         // Original eligible x-region, but NO integer truncation of the radius.
+         if(x-r<5. || x+r>double(c.nx-3))return false;
+-        int sr=int(std::ceil(r+c.exclusion_gap_grid));
+-        for(int i=std::max(1,x-sr);i<=std::min(c.nx,x+sr);++i)for(int j=1;j<=c.ny;++j)for(int k=1;k<=c.nz;++k){
++        const double limit=r+c.exclusion_gap_grid;
++        const auto ys=periodic_neighborhood(y,limit,c.ny),zs=periodic_neighborhood(z,limit,c.nz);
++        const int sr=bounded_reach(limit,c.nx);
++        // Same ascending global i,j,k order and same floating-point predicate
++        // as the full-plane scan; only provably irrelevant cells are skipped.
++        for(int i=int(std::max(1LL,static_cast<long long>(x)-sr));
++            i<=int(std::min(static_cast<long long>(c.nx),static_cast<long long>(x)+sr));++i)
++        for(int jy=0;jy<ys.count;++jy)for(int j=ys.lo[jy];j<=ys.hi[jy];++j)
++        for(int kz=0;kz<zs.count;++kz)for(int k=zs.lo[kz];k<=zs.hi[kz];++k){
+             if(p(i,j,k)>.01 && std::sqrt(std::pow(double(i-x),2)+std::pow(minimum_image(j-y,c.ny),2)+std::pow(minimum_image(k-z,c.nz),2))<r+c.exclusion_gap_grid)return false;
+         }
+         return true;
+     }
+     int stamp(int x,int y,int z){
+         if(domain.size>1)return ordered_seed(false,x,y,z);
+-        int changed=0,rr=int(std::ceil(c.radius_grid));
+-        for(int i=std::max(1,x-rr);i<=std::min(c.nx,x+rr);++i)for(int j=1;j<=c.ny;++j)for(int k=1;k<=c.nz;++k){
++        int changed=0;
++        const int rr=bounded_reach(c.radius_grid,c.nx);
++        const auto ys=periodic_neighborhood(y,c.radius_grid,c.ny),zs=periodic_neighborhood(z,c.radius_grid,c.nz);
++        // Sorted wrapped intervals avoid duplicate cells and preserve budget
++        // accumulation order, including both periodic seams and short axes.
++        for(int i=int(std::max(1LL,static_cast<long long>(x)-rr));
++            i<=int(std::min(static_cast<long long>(c.nx),static_cast<long long>(x)+rr));++i)
++        for(int jy=0;jy<ys.count;++jy)for(int j=ys.lo[jy];j<=ys.hi[jy];++j)
++        for(int kz=0;kz<zs.count;++kz)for(int k=zs.lo[kz];k<=zs.hi[kz];++k){
+             double dy=minimum_image(j-y,c.ny),dz=minimum_image(k-z,c.nz);
+             if((i-x)*(i-x)+dy*dy+dz*dz<=c.radius_grid*c.radius_grid && p(i,j,k)<.01){
+                 b.nucO+=Physics::oxideO-o(i,j,k);b.nucCr+=Physics::oxideCr-cr(i,j,k);
+@@ -567,7 +719,7 @@
+                 for(auto& e:eta)e(i,j,k)=0.; // Same discrete insertion: consume metal order locally.
+             }
+         }
+-        if(changed){++b.nuclei;}
++        if(changed){++b.nuclei;if(has_eta())invalidate_eta_cache();}
+         return changed;
+     }
+     void initialize_center_oxide(){
+@@ -594,6 +746,7 @@
+         if(domain.size>1)MPI_Allreduce(MPI_IN_PLACE,&center_seed_cells,1,MPI_INT,MPI_SUM,domain.comm);
+         if(center_seed_cells==0)
+             throw std::runtime_error("Center seed covers no cell centres: increase --radius-grid.");
++        if(has_eta())invalidate_eta_cache();
+         if(domain.rank==0)++b.nuclei;
+     }
+     void nucleate(){
+@@ -666,7 +819,10 @@
+             throw;
+         }
+         o.a.swap(on.a);cr.a.swap(crn.a);p.a.swap(pn.a);
+-        if(c.eta_L>0.)for(std::size_t g=0;g<eta.size();++g)eta[g].a.swap(eta_new[g].a);
++        if(c.eta_L>0.){
++            for(std::size_t g=0;g<eta.size();++g)eta[g].a.swap(eta_new[g].a);
++            if(has_eta())invalidate_eta_cache();
++        }
+     }
+     // [9] ParaView output: voxel-centred structured points in metres, X fastest.
+     void vtk(const std::string& path){
+@@ -698,6 +854,22 @@
+         write("GB_mask",[&](int i,int j,int k){return gb(i,j,k);});
+         if(!f)throw std::runtime_error("Output write failed: "+path);
+     }
++    void vti(const std::string& path){
++        if(domain.size>1){gather_state();root_action(domain.comm,[&]{snapshot->vti(path);});return;}
++        refresh();
++        CompressedVtiWriter writer(path,c);
++        writer.array([&](int i,int j,int k){return p(i,j,k);});
++        writer.array([&](int i,int j,int k){return o(i,j,k);});
++        writer.array([&](int i,int j,int k){return cr(i,j,k);});
++        writer.array([&](int i,int j,int k){return muO(i,j,k);});
++        writer.array([&](int i,int j,int k){return muCr(i,j,k);});
++        writer.array([&](int i,int j,int k){return grain_sum(i,j,k);});
++        writer.array([&](int i,int j,int k){return gb(i,j,k);});
++        writer.finish();
++    }
++    void write_visualization(const std::string& stem){
++        if(c.output_format=="vti")vti(stem+".vti");else vtk(stem+".vtk");
++    }
+     // [10] Reproducible inputs, 3D grain statistics and model diagnostics.
+     void metadata(){
+         if(domain.rank!=0)return;
+@@ -707,6 +879,12 @@
+          <<"\ndx_m="<<c.dx<<"\ndy_m="<<c.dy<<"\ndz_m="<<c.dz<<"\ndt_s="<<c.dt
+          <<"\nsteps="<<c.steps<<"\noutput_every="<<c.output_every
+          <<"\nvtk_fields=phi,conc_O,conc_Cr,mu_O,mu_Cr,grain_sum,GB_mask"
++         <<"\noutput_format="<<c.output_format
++         <<"\noutput_precision="<<(c.output_format=="vtk"?"float64_ascii_17digits":c.output_precision)
++         <<"\noutput_compression="<<(c.output_format=="vti"?"zlib_raw_appended":"none")
++         <<"\ncompression_level="<<c.compression_level
++         <<"\nfrozen_eta_cache="<<(c.frozen_eta_cache?"on":"off")
++         <<"\nnucleation_search=bounded_periodic_neighborhoods_original_order_and_predicates"
+          <<"\nGB_mask_definition="<<(!c.grains?"zero;single_crystal":(has_eta()?"eta_transport_scale*min(1,16*sum_(a<b) eta_a^2*eta_b^2);no_extra_phi_mask":"exp(-4*ln(2)*distance_to_GB_grid^2/gb_fwhm_grid^2);fixed_Voronoi;zero_when_one_grain;no_extra_phi_mask"))
+          <<"\ngrain_sum_definition="<<(has_eta()?"sum_(g=1..N) g*eta_g;unnormalized;no_extra_phi_mask":"initial_grain_id*(1-h(phi));fixed_grain_fallback_no_eta_fields")
+          <<"\noxygen_bc="<<c.bc<<"\nCk="<<c.ck<<"\nbounds="<<c.bounds
+@@ -818,7 +996,12 @@
+               <<"--eta-W value --eta-kappa value (0: auto width) --eta-L value --eta-oxide-penalty value (-1: eta-W)\n"
+               <<"--eta-output all|summary (compatibility option; grain_sum replaces individual eta arrays)\n"
+               <<"--max-eta-fields N (default 512; memory guard)\n"
+-              <<"VTK arrays: phi, conc_O, conc_Cr, mu_O, mu_Cr, grain_sum, GB_mask.\n"
++              <<"--output-format vti|vtk (default vti; vtk: original ASCII double output)\n"
++              <<"--output-precision float32|float64 (default float32; VTI only)\n"
++              <<"--compression-level 0..9 (default 1, fast zlib; VTI only)\n"
++              <<"--frozen-eta-cache on|off (default on; off: rebuild every refresh for comparison)\n"
++              <<"Arrays: phi, conc_O, conc_Cr, mu_O, mu_Cr, grain_sum, GB_mask.\n"
++              <<"Output files are visualization snapshots, not full eta restart checkpoints.\n"
+               <<"grain_sum: raw weighted eta sum; without eta, initial_grain_id*(1-h(phi)).\n"
+               <<"GB_mask: existing 3D GB transport mask; eta overlap or fixed Voronoi, no extra phi mask.\n"
+               <<"--oxygen-diffusion on|off (default on; off: no O transport or ongoing O boundary supply)\n"
+@@ -847,6 +1030,13 @@
+         else if(a=="--eta-oxide-penalty")c.eta_oxide_penalty=std::stod(v);
+         else if(a=="--eta-output")c.eta_output=v;
+         else if(a=="--max-eta-fields")c.max_eta_fields=std::stoi(v);
++        else if(a=="--output-format")c.output_format=v;
++        else if(a=="--output-precision")c.output_precision=v;
++        else if(a=="--compression-level"){
++            std::size_t used=0;c.compression_level=std::stoi(v,&used);
++            if(used!=v.size())throw std::runtime_error("--compression-level expects an integer 0..9.");
++        }
++        else if(a=="--frozen-eta-cache")c.frozen_eta_cache=parse_on_off(v,a);
+         else if(a=="--oxygen-diffusion")c.oxygen_diffusion=parse_on_off(v,a);
+         else if((a=="--left-edge-sites"||a=="--left-face-sites")){std::size_t used=0;c.left_edge_sites=std::stoi(v,&used);if(used!=v.size()||c.left_edge_sites<0)throw std::runtime_error("--left-edge-sites expects a nonnegative integer.");}
+         else if(a=="--grain-diameter-grid")c.grain_diameter_grid=std::stod(v);
+@@ -871,6 +1061,11 @@
+     if(c.eta_W<=0.||c.eta_kappa<0.||c.eta_L<0.||
+        (c.eta_oxide_penalty<0.&&c.eta_oxide_penalty!=-1.)||c.max_eta_fields<1)
+         throw std::runtime_error("Invalid eta parameter bounds.");
++    if(c.output_format!="vti"&&c.output_format!="vtk")throw std::runtime_error("--output-format expects vti or vtk.");
++    if(c.output_precision!="float32"&&c.output_precision!="float64")throw std::runtime_error("--output-precision expects float32 or float64.");
++    if(c.compression_level<0||c.compression_level>9)throw std::runtime_error("--compression-level must lie in [0,9].");
++    if(!std::isfinite(c.exclusion_gap_grid)||c.exclusion_gap_grid<0.||!std::isfinite(c.radius_grid+c.exclusion_gap_grid))
++        throw std::runtime_error("Nucleation exclusion length must be finite and nonnegative.");
+     if(c.eta_output!="all"&&c.eta_output!="summary")throw std::runtime_error("--eta-output expects all or summary.");
+     if(c.grain_evolution && c.grains && (!std::isfinite(eta_K(c))||!std::isfinite(eta_transport_scale(c))||eta_K(c)<=0.))
+         throw std::runtime_error("Derived eta coefficients are invalid.");
+@@ -901,6 +1096,7 @@
+         m.p(i,j,k)=.1+.01*std::cos(.1*i+.4*j-.2*k);
+         for(std::size_t g=0;g<m.eta.size();++g)m.eta[g](i,j,k)=.2+.02*std::cos(.2*i-.3*j+.7*g+.5*k);
+     }
++    m.invalidate_eta_cache();
+     m.refresh();
+ }
+ static void self_test(){
+@@ -1134,7 +1330,7 @@
+             grain_history<<"step,time_s,grain_id,dominant_metal_cells,weighted_metal_volume_cells,weighted_metal_volume_m3\n";
+         }
+         });
+-        m.log(log,0);m.grain_log(grain_diag,grain_history,0);m.vtk(c.out+"/fields_0.vtk");
++        m.log(log,0);m.grain_log(grain_diag,grain_history,0);m.write_visualization(c.out+"/fields_0");
+         if(rank==0){
+ #ifdef NICR_SERIAL_VERIFY
+         std::cout<<"EXECUTION BACKEND: single-process verification shim, not native MPI.\n";
+@@ -1142,6 +1338,8 @@
+         std::cout<<"EXECUTION BACKEND: thread rank emulation, not native MPI.\n";
+ #endif
+         std::cout<<"MPI processes: "<<m.domain.size<<" (X slabs)\n";
++        std::cout<<"Output: "<<c.output_format<<", "<<(c.output_format=="vtk"?"ASCII Float64":c.output_precision)
++                 <<"; zlib level="<<c.compression_level<<"; frozen-eta cache="<<(c.frozen_eta_cache?"on":"off")<<".\n";
+         std::cout<<"Version "<<VERSION<<"; grains="<<(c.grains?"on":"off")
+                   <<"; oxygen_diffusion="<<(c.oxygen_diffusion?"on":"off")
+                   <<"; nucleation="<<c.nucleation<<"; "<<m.seeds.size()<<" grain(s).\n"
+@@ -1182,13 +1380,13 @@
+                         log.flush();if(!log)throw std::runtime_error("Diagnostics write failed.");
+                         if(m.has_eta()){grain_diag.flush();grain_history.flush();if(!grain_diag||!grain_history)throw std::runtime_error("Grain diagnostics write failed.");}
+                     });
+-                    m.vtk(c.out+"/fields_"+std::to_string(n)+".vtk");
++                    m.write_visualization(c.out+"/fields_"+std::to_string(n));
+                 }
+             }
+         }catch(const std::exception&e){
+             root_action(MPI_COMM_WORLD,[&]{std::ofstream err(c.out+"/STOPPED.txt");err<<"Last accepted time step: "<<last_completed<<"\n"<<e.what()<<"\n";});
+             // A nucleation event may already have modified the current state before a rejected PDE step.
+-            m.vtk(c.out+"/state_at_failure.vtk");throw;
++            m.write_visualization(c.out+"/state_at_failure");throw;
+         }
+         if(rank==0)std::cout<<"Finished "<<last_completed<<" steps. Output: "<<c.out<<"\n";
+         return 0;

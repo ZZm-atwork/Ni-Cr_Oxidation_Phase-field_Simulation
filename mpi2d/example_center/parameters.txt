@@ -1,0 +1,64 @@
+STATUS: COUPLED ETA/OXIDATION MODEL; GRAIN PARAMETERS REQUIRE CALIBRATION
+nx=61
+ny=61
+dx_m=1e-08
+dy_m=1e-08
+dt_s=9.9999999999999998e-13
+steps=500
+oxygen_bc=closed
+Ck=off
+bounds=legacy
+mpi_processes=1
+mpi_decomposition=X slabs
+version=mpi-eta-v1
+nucleation_mode=center
+initial_center_seed_cells=97
+grain_structure=on
+oxygen_diffusion=on
+oxygen_boundary_supply=closed
+W=10000
+kappa_phi=1.7000000000000001e-10
+L_phi=0.20000000000000001
+mu_res_model_units=364688
+surface_mobility_concentration_reference=0.0023
+left_edge_sites_requested=2
+left_edge_sites_active=2
+grain_diameter_target_grid=50
+grain_diameter_target_m=4.9999999999999998e-07
+voronoi_sites=2
+gb_mask_FWHM_grid=4
+gb_mask_FWHM_m=4.0000000000000001e-08
+gb_mask_integral_effective_width_grid=4.2578680777249049
+gb_mask_integral_effective_width_m=4.2578680777249044e-08
+gb_peak_mobility_factor_O=28.199999999999999
+gb_peak_mobility_factor_Cr=563
+random_seed=2001
+nucleus_geometric_radius_grid=5.5
+nucleus_geometric_radius_m=5.5000000000000003e-08
+nucleation_period_s=9.9999999999999995e-08
+NOTE: Vm=1 is retained, not evidence that energy/mobility units have been physically audited.
+NOTE: no GB migration, GB energy, segregation, oxide GBs, or interphase enhancement.
+NOTE: cell-centred grid; periodic Y; no-flux right; natural concentration/phi derivatives in X.
+execution_backend=single_process_verification_shim
+grain_evolution_requested=on
+grain_evolution_active=on
+eta_fields=2
+eta_W=10000
+eta_kappa=5.0989051595555906e-12
+eta_L=0.20000000000000001
+eta_oxide_penalty=10000
+eta_width_10_90_grid=7.0166192905743623
+eta_mask_integrated_width_m=4.2578680777249037e-08
+eta_transport_scale=1.0000000000000002
+eta_planar_GB_energy_model_units=0.0001064467019431226
+eta_planar_geometric_mobility_model_units=9.5802031748810351e-09
+eta_output=all
+NOTE: New grain coefficients are provisional, not experimental Ni-Cr calibration.
+NOTE: Dynamic eta modifies the GB pathways AND adds the reciprocal grain-energy force to phi.
+NOTE: GB factors refer to the original integrated-width convention; GB_mask includes eta_transport_scale.
+initial_oxide_center_x_m=3.0499999999999999e-07
+initial_oxide_center_y_m=3.0499999999999999e-07
+initial_oxide_center_i=31
+initial_oxide_center_j=31
+NOTE: one initial hard oxide only; no later Ksp insertion or replacement seed.
+measured_arithmetic_mean_equivalent_diameter_grid=48.66932306229684

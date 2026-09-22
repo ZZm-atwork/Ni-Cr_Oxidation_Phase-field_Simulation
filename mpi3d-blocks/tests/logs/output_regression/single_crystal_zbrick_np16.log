@@ -1,0 +1,9 @@
+$ /mnt/data/NiCr3D_MPI_blocks/emulated_mpi_test 16 --nx 31 --ny 17 --nz 15 --grain-diameter-grid 18 --radius-grid 3.5 --seed 2001 --eta-output all --ck off --bounds legacy --dt 1e-12 --steps 30 --output-every 30 --grains off --bc concentration --nucleation off --px 2 --py 2 --pz 4 --out /mnt/data/block_regression_final/single_crystal_zbrick_np16
+THREAD EMULATION: 16 ranks in one address space; NOT a real MPI runtime test.
+EXECUTION BACKEND: verification shim, NOT native MPI.
+MPI processes: 16; Cartesian grid 2 x 2 x 4 (X x Y x Z; six-face halos)
+Version mpi-eta-3d-cartesian-v2; grains=off; oxygen_diffusion=on; nucleation=off; 1 grain(s).
+Box 31 x 17 x 15 cells; configured GB factors O=28.2, Cr=563.
+Single crystal: grain_id=1, GB_mask=0; GB enhancement inactive.
+step 30/30 (100%), time=3e-11 s
+Finished 30 steps. Output: /mnt/data/block_regression_final/single_crystal_zbrick_np16

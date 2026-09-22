@@ -1,0 +1,37 @@
+# Local machine/editor files
+.DS_Store
+__MACOSX/
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+# Build products
+build/
+cmake-build-*/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+nicr2d_mpi
+nicr3d_mpi
+serial_verify
+emulated_mpi_test
+serial_check
+emulated_check
+optimization_check
+writer_check
+regression_check
+/pearl_serial
+/pearl_parallel
+# New simulation output; curated imported fixtures remain available
+run_*/
+smoke_*/
+DATA/
+*.h5
+*.xmf
+*.vti
+*.vti.tmp
+# Runtime/editor temporary files
+*.tmp
+*.swp

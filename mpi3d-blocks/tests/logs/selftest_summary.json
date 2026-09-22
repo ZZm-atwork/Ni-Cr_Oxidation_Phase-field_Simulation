@@ -1,0 +1,159 @@
+[
+  {
+    "case": "auto_1",
+    "ranks": 1,
+    "args": [],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 0.465
+  },
+  {
+    "case": "auto_2",
+    "ranks": 2,
+    "args": [],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 0.615
+  },
+  {
+    "case": "auto_4",
+    "ranks": 4,
+    "args": [],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 0.719
+  },
+  {
+    "case": "auto_8",
+    "ranks": 8,
+    "args": [],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 1.226
+  },
+  {
+    "case": "auto_16",
+    "ranks": 16,
+    "args": [],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 2.988
+  },
+  {
+    "case": "auto_27",
+    "ranks": 27,
+    "args": [],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 4.156
+  },
+  {
+    "case": "xslab_4",
+    "ranks": 4,
+    "args": [
+      "--px",
+      "4",
+      "--py",
+      "1",
+      "--pz",
+      "1"
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 0.616
+  },
+  {
+    "case": "yslab_4",
+    "ranks": 4,
+    "args": [
+      "--px",
+      "1",
+      "--py",
+      "4",
+      "--pz",
+      "1"
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 0.666
+  },
+  {
+    "case": "zslab_4",
+    "ranks": 4,
+    "args": [
+      "--px",
+      "1",
+      "--py",
+      "1",
+      "--pz",
+      "4"
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 0.668
+  },
+  {
+    "case": "yz_4",
+    "ranks": 4,
+    "args": [
+      "--px",
+      "1",
+      "--py",
+      "2",
+      "--pz",
+      "2"
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 0.666
+  },
+  {
+    "case": "partial_8",
+    "ranks": 8,
+    "args": [
+      "--py",
+      "4"
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 1.168
+  },
+  {
+    "case": "manual_16",
+    "ranks": 16,
+    "args": [
+      "--px",
+      "4",
+      "--py",
+      "2",
+      "--pz",
+      "2"
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 3.006
+  },
+  {
+    "case": "manual_z16",
+    "ranks": 16,
+    "args": [
+      "--px",
+      "2",
+      "--py",
+      "2",
+      "--pz",
+      "4"
+    ],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 2.385
+  },
+  {
+    "case": "auto_64",
+    "ranks": 64,
+    "args": [],
+    "backend": "thread emulation (NOT native MPI)",
+    "exit_code": 0,
+    "elapsed_s": 12.415
+  }
+]

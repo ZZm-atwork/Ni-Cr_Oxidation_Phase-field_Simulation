@@ -1,0 +1,11 @@
+$ /mnt/data/NiCr3D_MPI_blocks/emulated_mpi_test 16 --nx 31 --ny 17 --nz 15 --grain-diameter-grid 18 --radius-grid 3.5 --seed 2001 --eta-output all --ck off --bounds legacy --dt 1e-12 --steps 30 --output-every 30 --grain-evolution off --bc closed --nucleation center --out /mnt/data/block_regression_final/fixed_center_auto_np16
+THREAD EMULATION: 16 ranks in one address space; NOT a real MPI runtime test.
+EXECUTION BACKEND: verification shim, NOT native MPI.
+MPI processes: 16; Cartesian grid 4 x 2 x 2 (X x Y x Z; six-face halos)
+Version mpi-eta-3d-cartesian-v2; grains=on; oxygen_diffusion=on; nucleation=center; 3 grain(s).
+Box 31 x 17 x 15 cells; configured GB factors O=28.2, Cr=563.
+Voronoi random seed=2001; target grain diameter=18 grid = 0.18 um.
+One initial hard oxide at box centre (0.155, 0.085, 0.075) um; radius=3.5 grids; 179 cells. Additional Ksp insertion is OFF.
+WARNING: 3D adds a third transport/curvature direction; check timestep convergence before production.
+step 30/30 (100%), time=3e-11 s
+Finished 30 steps. Output: /mnt/data/block_regression_final/fixed_center_auto_np16

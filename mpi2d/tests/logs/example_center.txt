@@ -1,0 +1,12 @@
+EXECUTION BACKEND: single-process verification shim, not native MPI.
+MPI processes: 1 (X slabs)
+Version mpi-eta-v1; grains=on; oxygen_diffusion=on; nucleation=center; 2 grain(s).
+Box 61 x 61 cells; configured GB factors O=28.2, Cr=563.
+Voronoi random seed=2001; target grain diameter=50 grid = 0.5 um.
+Evolving eta: 2 fields; W_eta=10000, kappa_eta=5.09891e-12, L_eta=0.2, oxide penalty=10000.
+Eta 10-90 width=7.01662 grids; GB conductance scale=1.
+NOTE: grain coefficients are provisional; dynamic coupling adds a grain-energy contribution to phi.
+One initial hard oxide at box centre (0.305, 0.305) um; radius=5.5 grids; 97 cells. Additional Ksp insertion is OFF.
+WARNING: old timestep is NOT certified stable with enhanced GB mobility.
+step 500/500 (100%), time=5e-10 s
+Finished 500 steps. Output: /mnt/data/NiCr2D_MPI_eta/example_center

@@ -1,0 +1,109 @@
+PASS case 0
+PASS case 1
+PASS case 2
+PASS case 3
+PASS case 4
+PASS case 5
+PASS case 6
+PASS case 7
+PASS case 8
+PASS case 9
+PASS case 10
+PASS case 11
+PASS case 12
+PASS case 13
+PASS case 14
+PASS case 15
+PASS case 16
+PASS case 17
+PASS case 18
+PASS case 19
+PASS case 20
+PASS case 21
+PASS case 22
+PASS case 23
+PASS case 24
+PASS case 25
+PASS case 26
+PASS case 27
+PASS case 28
+PASS case 29
+PASS case 30
+PASS case 31
+PASS case 32
+PASS case 33
+PASS case 34
+PASS case 35
+PASS case 36
+PASS case 37
+PASS case 38
+PASS case 39
+PASS case 40
+PASS case 41
+PASS case 42
+PASS case 43
+PASS case 44
+PASS case 45
+PASS case 46
+PASS case 47
+{
+  "backend": "serial",
+  "ranks": [
+    1
+  ],
+  "cases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "reference_sha256": "12c980043086ea1ee1b11d4bb442a586aa28a3650813318e87fbd3217b47d073",
+  "state_checks": 192,
+  "ascii_checks": 96,
+  "vti_checks": 96,
+  "passed": true
+}

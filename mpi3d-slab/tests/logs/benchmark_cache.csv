@@ -1,0 +1,3 @@
+mode,steps,grains,median_seconds
+uncached,100,14,0.711561
+cached,100,14,0.604872

@@ -1,0 +1,1 @@
+PASS: 5016 interval cases, 50400 exact exclusion decisions, 432 sphere insertions and budgets.

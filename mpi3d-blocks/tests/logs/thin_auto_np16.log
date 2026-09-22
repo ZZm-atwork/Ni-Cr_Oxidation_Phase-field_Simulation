@@ -1,0 +1,9 @@
+$ /mnt/data/NiCr3D_MPI_blocks/emulated_mpi_test 16 --nx 3 --ny 5 --nz 5 --grains off --bc closed --ck off --nucleation off --steps 3 --out /mnt/data/thin_auto_np16
+THREAD EMULATION: 16 ranks in one address space; NOT a real MPI runtime test.
+EXECUTION BACKEND: verification shim, NOT native MPI.
+MPI processes: 16; Cartesian grid 2 x 2 x 4 (X x Y x Z; six-face halos)
+Version mpi-eta-3d-cartesian-v2; grains=off; oxygen_diffusion=on; nucleation=off; 1 grain(s).
+Box 3 x 5 x 5 cells; configured GB factors O=28.2, Cr=563.
+Single crystal: grain_id=1, GB_mask=0; GB enhancement inactive.
+step 3/3 (100%), time=6e-10 s
+Finished 3 steps. Output: /mnt/data/thin_auto_np16

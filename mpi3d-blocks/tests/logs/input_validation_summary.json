@@ -1,0 +1,52 @@
+[
+  {
+    "case": "product_mismatch",
+    "exit_code": 1,
+    "passed": true
+  },
+  {
+    "case": "partial_not_divisible",
+    "exit_code": 1,
+    "passed": true
+  },
+  {
+    "case": "negative_axis",
+    "exit_code": 1,
+    "passed": true
+  },
+  {
+    "case": "noninteger_axis",
+    "exit_code": 1,
+    "passed": true
+  },
+  {
+    "case": "empty_block",
+    "exit_code": 1,
+    "passed": true
+  },
+  {
+    "case": "impossible_factorization",
+    "exit_code": 1,
+    "passed": true
+  },
+  {
+    "case": "thin_auto",
+    "ranks": 1,
+    "grid": [
+      1,
+      1,
+      1
+    ],
+    "passed": true
+  },
+  {
+    "case": "thin_auto",
+    "ranks": 16,
+    "grid": [
+      2,
+      2,
+      4
+    ],
+    "passed": true
+  }
+]

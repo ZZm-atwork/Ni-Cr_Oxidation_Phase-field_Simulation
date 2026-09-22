@@ -1,0 +1,1 @@
+PASS: 24 VTI fixtures; sub-block, exact-block and multi-block payloads; Float32/Float64; zlib levels 0/1/6/9; atomic failure cleanup.

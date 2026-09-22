@@ -1,0 +1,4 @@
+$ /mnt/data/NiCr3D_MPI_blocks/emulated_mpi_test 4 --py 3 --steps 0 --out /mnt/data/should_not_be_created_partial_not_divisible
+THREAD EMULATION: 4 ranks in one address space; NOT a real MPI runtime test.
+ERROR [rank 1]: ERROR [rank Process-grid product must equal MPI process count; a partially fixed product must divide it.
+ERROR [rank 2

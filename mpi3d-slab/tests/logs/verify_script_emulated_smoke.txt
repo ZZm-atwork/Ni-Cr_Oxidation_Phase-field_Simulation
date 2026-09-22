@@ -1,0 +1,23 @@
+PASS case 0
+PASS case 12
+PASS case 24
+PASS case 36
+PASS case 47
+{
+  "backend": "emulated",
+  "ranks": [
+    4
+  ],
+  "cases": [
+    0,
+    12,
+    24,
+    36,
+    47
+  ],
+  "reference_sha256": "12c980043086ea1ee1b11d4bb442a586aa28a3650813318e87fbd3217b47d073",
+  "state_checks": 30,
+  "ascii_checks": 15,
+  "vti_checks": 15,
+  "passed": true
+}

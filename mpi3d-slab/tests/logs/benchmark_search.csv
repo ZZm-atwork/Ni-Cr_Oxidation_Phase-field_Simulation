@@ -1,0 +1,3 @@
+routine,candidates,accepted,median_seconds
+full_planes,2000,906,0.1386
+bounded,2000,906,0.0164632

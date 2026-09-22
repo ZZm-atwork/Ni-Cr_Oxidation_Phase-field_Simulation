@@ -1,0 +1,33 @@
+{
+  "source": "NiCr3D_grains.cpp",
+  "sha256": "bbe92fe1f197e7b6436370a070b1d751bc5bd394e3e6136567599043d8267a9f",
+  "baseline_source_sha256": "1835a9aea3c2745c177ad3d3a44d929822efd9c10aaa5ffd9ed32ab15602d6ed",
+  "native_mpi_build_tested": false,
+  "native_mpi_execution_tested": false,
+  "sol_performance_measured": false,
+  "backend": "thread-rank communication emulation; single-process numerical verification",
+  "compilers": [
+    "GCC 14.2.0",
+    "Clang 17.0.0"
+  ],
+  "selftest_layouts_passed": 14,
+  "emulated_rank_counts": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    27,
+    64
+  ],
+  "output_cases_passed": 130,
+  "prior_single_rank_physics_cases_passed": 10,
+  "sanitizers": "Clang AddressSanitizer + UndefinedBehaviorSanitizer; 8 emulated ranks; leak detection enabled",
+  "invalid_cli_cases_passed": 6,
+  "thin_mesh_more_ranks_than_nx": true,
+  "notes": [
+    "Every VTK and grain output compared byte-for-byte.",
+    "Inventory diagnostics tolerance: 1e-10*(1+abs(reference)).",
+    "Root snapshots for ordered seeding and output remain full-domain."
+  ]
+}

@@ -1,0 +1,9 @@
+c++ -O3 -std=c++17 -Wall -Wextra -pedantic -DNICR_INDEX_CHECK -DNICR_SERIAL_VERIFY -pthread NiCr3D_grains.cpp -o serial_verify
+./serial_verify --self-test
+SINGLE-PROCESS VERIFICATION ONLY; not a native MPI test.
+PASS: 3D Laplacian; X no-flux; Y/Z periodic faces (edges/corners are unused).
+PASS: 3D Voronoi volume rule, reproducibility, non-extruded grains, inlet anchors and memory guard.
+PASS: six-face conservative flux, O/Cr budgets, mobility gates and oxygen switch.
+PASS: odd/even spherical seeds, 739-voxel R=5.5, Y/Z seam wrapping, exclusion and Ksp.
+PASS: 3D eta initialization, frozen eta, seed consumption, variational derivatives and energy descent.
+PASS: exact Cartesian/serial fields and six faces; ordered block gather/scatter; fixed/evolving/frozen eta; all BCs; O switch; Ck; spherical/Ksp seeds; uneven/thin blocks; collective rejection. Grid 1 x 1 x 1.

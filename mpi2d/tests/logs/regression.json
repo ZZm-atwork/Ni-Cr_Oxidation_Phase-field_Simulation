@@ -1,0 +1,58 @@
+[
+  {
+    "case": "ksp_startup",
+    "result": "fixed-mode CSV/VTK byte-identical to uploaded baseline"
+  },
+  {
+    "case": "anchored",
+    "result": "fixed-mode CSV/VTK byte-identical to uploaded baseline"
+  },
+  {
+    "case": "center",
+    "result": "fixed-mode CSV/VTK byte-identical to uploaded baseline"
+  },
+  {
+    "case": "oxygen_off",
+    "result": "fixed-mode CSV/VTK byte-identical to uploaded baseline"
+  },
+  {
+    "case": "grains_off",
+    "result": "fixed-mode CSV/VTK byte-identical to uploaded baseline"
+  },
+  {
+    "case": "Physics",
+    "result": "source text identical"
+  },
+  {
+    "case": "fmetal",
+    "result": "source text identical"
+  },
+  {
+    "case": "foxide",
+    "result": "source text identical"
+  },
+  {
+    "case": "mobility",
+    "result": "source text identical"
+  },
+  {
+    "case": "ksp_startup",
+    "result": "eta fields and grain outputs identical for 1 vs 4 emulated ranks",
+    "max_diagnostic_difference": 0
+  },
+  {
+    "case": "anchored",
+    "result": "eta fields and grain outputs identical for 1 vs 4 emulated ranks",
+    "max_diagnostic_difference": 0
+  },
+  {
+    "case": "center",
+    "result": "eta fields and grain outputs identical for 1 vs 4 emulated ranks",
+    "max_diagnostic_difference": 1.2904017555827232e-22
+  },
+  {
+    "case": "oxygen_off",
+    "result": "eta fields and grain outputs identical for 1 vs 4 emulated ranks",
+    "max_diagnostic_difference": 0
+  }
+]

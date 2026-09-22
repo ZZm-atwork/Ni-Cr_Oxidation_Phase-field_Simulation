@@ -1,0 +1,14 @@
+THREAD EMULATION: 4 ranks in one address space; NOT a real MPI runtime test.
+PASS: left-edge Voronoi anchors; count preservation; inlet coverage; reproducibility; limits.
+PASS: center seed on odd/even boxes; float radius; oxide composition/locality; budgets; no reseeding.
+PASS: original self-tests; seed reproducibility; single-crystal geometry/mobility;
+O transport/inlet switches for all BCs; Cr/phi remain active; original hard-seed/Ck semantics; option parsing.
+ETA CHECK: largest scaled energy-derivative error=1.84362e-10
+ETA CHECK: planar dx=1 max force=0.00512028 mask integral=4.25787
+ETA CHECK: planar dx=0.5 max force=0.00132059 mask integral=4.25787
+ETA CHECK: planar dx=0.25 max force=0.000331574 mask integral=4.25787
+ETA CHECK: circular grain area 462.725 -> 437.842; energy 49.9466 -> 48.5495
+PASS: dynamic eta initialization, variational coupling, planar convergence, conductance normalization, curvature motion, oxide suppression and hard seeds.
+PASS: MPI vs serial fields exactly equal; budgets; all BCs; O switch; center/hard/Ksp seeds;
+uneven and one-column slabs; cross-rank/periodic exclusion; collective trial failure.
+PASS: eta MPI/serial comparison; halo/gather/scatter; Ksp; one-column slabs; collective eta rejection.

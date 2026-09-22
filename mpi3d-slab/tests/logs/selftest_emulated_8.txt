@@ -1,0 +1,8 @@
+THREAD EMULATION: 8 ranks in one address space; NOT a real MPI runtime test.
+PASS: 3D Laplacian; X no-flux; Y/Z periodic faces and corners.
+PASS: 3D Voronoi volume rule, reproducibility, non-extruded grains, inlet anchors and memory guard.
+PASS: six-face conservative flux, O/Cr budgets, mobility gates and oxygen switch.
+PASS: odd/even spherical seeds, 739-voxel R=5.5, Y/Z seam wrapping, exclusion and Ksp.
+PASS: 3D eta initialization, frozen eta, seed consumption, variational derivatives and energy descent.
+PASS: volumetric weighted grain_sum; exact mixed amplitudes; conditional storage; lean snapshot.
+PASS: exact 3D distributed/serial fields; YZ halo/gather/scatter; fixed and eta modes; all BCs; O switch; Ck; spherical/Ksp seeds; uneven/one-column slabs; collective rejection.

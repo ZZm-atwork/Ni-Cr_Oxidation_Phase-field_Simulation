@@ -1,0 +1,1 @@
+PASS: 24 fixtures read exactly by VTK 9.6.2

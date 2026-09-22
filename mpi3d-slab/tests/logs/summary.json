@@ -1,0 +1,182 @@
+{
+  "reference_sha256": "12c980043086ea1ee1b11d4bb442a586aa28a3650813318e87fbd3217b47d073",
+  "updated_sha256": "1ca6a37737e8127f9488df67dbcd0b3237e38c47496f1111f1007f3b53a829ba",
+  "verification_serial": {
+    "backend": "serial",
+    "ranks": [
+      1
+    ],
+    "cases": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "reference_sha256": "12c980043086ea1ee1b11d4bb442a586aa28a3650813318e87fbd3217b47d073",
+    "state_checks": 192,
+    "ascii_checks": 96,
+    "vti_checks": 96,
+    "passed": true
+  },
+  "verification_emulated": {
+    "backend": "emulated",
+    "ranks": [
+      4
+    ],
+    "cases": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "reference_sha256": "12c980043086ea1ee1b11d4bb442a586aa28a3650813318e87fbd3217b47d073",
+    "state_checks": 288,
+    "ascii_checks": 144,
+    "vti_checks": 144,
+    "passed": true
+  },
+  "io_benchmark": {
+    "vtk": {
+      "format": "vtk",
+      "bytes": "214456140",
+      "median_seconds": "3.15473",
+      "trial1": "3.26383",
+      "trial2": "2.79587",
+      "trial3": "3.15473"
+    },
+    "float64": {
+      "format": "float64",
+      "bytes": "31162450",
+      "median_seconds": "0.973897",
+      "trial1": "0.973897",
+      "trial2": "0.947822",
+      "trial3": "1.03281"
+    },
+    "float32": {
+      "format": "float32",
+      "bytes": "12631233",
+      "median_seconds": "0.594769",
+      "trial1": "0.593746",
+      "trial2": "0.602398",
+      "trial3": "0.594769"
+    }
+  },
+  "search_benchmark": {
+    "full_planes": {
+      "routine": "full_planes",
+      "candidates": "2000",
+      "accepted": "906",
+      "median_seconds": "0.1386"
+    },
+    "bounded": {
+      "routine": "bounded",
+      "candidates": "2000",
+      "accepted": "906",
+      "median_seconds": "0.0164632"
+    }
+  },
+  "cache_benchmark": {
+    "uncached": {
+      "mode": "uncached",
+      "steps": "100",
+      "grains": "14",
+      "median_seconds": "0.711561"
+    },
+    "cached": {
+      "mode": "cached",
+      "steps": "100",
+      "grains": "14",
+      "median_seconds": "0.604872"
+    }
+  },
+  "native_mpi_tested": false,
+  "vtk_reader_version": "9.6.2"
+}

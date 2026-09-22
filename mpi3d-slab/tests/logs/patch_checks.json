@@ -1,0 +1,10 @@
+[
+  {
+    "locally_tuned_coefficients": false,
+    "pass": true
+  },
+  {
+    "locally_tuned_coefficients": true,
+    "pass": true
+  }
+]
